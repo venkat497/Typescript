@@ -1,0 +1,136 @@
+28-10-2022:- 
+
+Modules:- 
+
+It is a chunk of code, that will be used to maintain modularity of the component/class. 
+
+Modules are implemented by:- 
+
+Export and Import. 
+
+a) Export:- Any declaration (such as a variable, function,class,interface etc) can be exported by adding the export keyword.
+
+   Export statements are handy when exports need to be renamed for consumers.
+
+  e.g.,Stringvalidator.ts--
+
+  export interface StringValidator {
+  isAcceptable(s: string): boolean;
+  }
+
+b) Import:-mporting is just about as easy as exporting from a module. Importing an exported declaration is done through using one of the import forms.
+
+-> ./ - 1 file back 
+-> ../ - 2 files back. 
+
+     ======================================================================== 
+
+Interfaces:- 
+
+It defines the structures of a class/object. 
+
+-maintains the structure, can be used as function types. 
+
+-mainly it is used to define a contract b/w unrelated classes.
+
+-An interface_name is name of interface. 
+
+-Interface body conatins variables and methods declarations. 
+
+Creating an interface OS with properties.
+
+e.g.,interface OS { 
+ 
+     name: String;  
+
+     language: String;  
+  }  
+
+  let OperatingSystem = (type: OS): void => {  
+
+  console.log('Android ' + type.name + ' has ' + type.language + ' language.');  
+};  
+
+let Oreo = {name: 'O', language: 'Java'} 
+ 
+OperatingSystem(Oreo);  
+ 
+compiling ts file into js- 
+
+let OperatingSystem = (type) => {  
+
+    console.log('Android ' + type.name + ' has ' + type.language + ' language.');  
+};  
+
+let Oreo = { name: 'O', language: 'Java' };  
+
+OperatingSystem(Oreo);  
+
+output:--Android O has java language. 
+
+use of interface:-- 
+
+1.validate the specific structure of properties. 
+
+2.Objects passed as parameters. 
+
+3.Objects returned from functions. 
+
+
+     ========================================================================= 
+
+Tuples:- 
+
+Store a collection of values of varied types.Where arrays will not serve this purpose.
+
+Typescript give us a data type called tuple that helps to achieve such a purpose.
+
+Tuples enable storing multiple fields of different types and can also be passed as parameters to functions. 
+
+Syntax:- 
+
+var tuple_name = [value1,value2,value3,…value n] 
+
+e.g.,var mytuple = [10,"Hello"]; 
+
+Tuple values are individually called items. Tuples are index based.
+
+syntax:- 
+  
+tuple_name[index] 
+
+e.g,
+
+var mytuple = [10,"Hello"];
+
+console.log(mytuple[0]) 
+
+console.log(mytuple[1])
+
+output:- 10 
+         Hello 
+
+      ================================================================ 
+
+Differnece b/w let,var and const..?? 
+
+These are the keywords to declare variables.
+
+Var:- 
+
+Can be used before its declared, its is function scope variables (availiable outside scope).
+
+Values can be changed. 
+
+let:- 
+
+Local scoped variables.Not availiable outside the scope.
+
+values can be changed. 
+
+const:- 
+
+values cannot be changed.
+
+If we give 'obj' then we can manipulate the value.
+ 
