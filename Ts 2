@@ -1,0 +1,138 @@
+27-10-2022:- 
+
+>>Constructors: 
+
+We can access the class with instance.
+  
+           It is a starting point of a class.Sets the default value.
+
+--It is a special function of class automatically invoked when we create an instance of class in ts.
+
+--Using constructor parameter properties or parameter shorthand syntax we can add new properties to the class.
+
+--Can create multiple constructors using technique of constructor method overload.
+
+a) Creating class contsructor:-
+
+e.g.,class Person {
+ 
+    constructor() {
+
+    console.log("Constructor is called")
+  }
+} 
+ 
+let p1= new Person()    //contructor is called
+ 
+let p2= new Person()    //contructor is called
+
+b) parameter to contructor:-
+
+   Constructors are like just functions in this way they can also accept parameters.
+
+e.g.,Class Person {
+
+     firstName:string;
+
+     lastName:string;
+ 
+    constructor(fName:string, lName:string) {
+
+    this.firstName=fName;
+
+    this.lastName=lName;
+  }
+} 
+
+we can access the current instance using 'this' inside the contsructor.Once it finisished constructor function returns new object. 
+
+let p= new Person("Jon","Snow")  
+
+console.log(p) 
+
+When we instantiate the class,we must pass the values of all arguments to constructor. 
+
+If we donot pass all the parameters/arguments,then it will result a compiler error.
+
+ 
+>>Constructor parameters/modifiers:-
+
+ These are like agents.Offers special shorthand syntax to convert parameters of constructor function into properties.
+
+ a) Readonly--Values cant be changed & only one instance is used.
+
+ b) Cont--Values cant be changed but when instance is changed then we can change values.
+
+ c) public--This parameter can be exposed outside the class itself. 
+
+ d) Private--This cant be exposed outside the class, only in the calss it can be seen.
+
+        =============================================================
+
+>> Stack and heap:--
+
+  (a)Stack--
+
+  1.It is a linear data structure.
+
+  2.Memory is allocated in continuous block.
+
+  3.The memory for a stack is allocated and deallocated automatically using the instructions of the compiler.
+
+  4.It costs less to build and maintain a stack.
+
+  5.It is easy to implement.
+
+  6.It is fixed in size; hence it is not flexible.
+
+  7.Its only disadvantage is the shortage of memory, since it is fixed in size.
+
+  8.If all the blocks are not occupied, memory gets wasted too.
+
+  9.It takes less time to access the elements of a stack.
+
+  10.It has an excellent locality of reference. 
+
+  (b)Heap-- 
+
+  1.It is a hierarchical data structure.
+
+  2.Memory is allocated in a random block.
+
+  3.The memory is allocated and deallocated manually by the programmer.
+
+  4.It is costly to build and maintain a heap.
+
+  5.It is difficult to implement a heap structure.
+
+  6.It takes more time to access elements of a heap.
+
+  7.The disadvantage of heap is fragmentation of memory.
+
+  8.Resizing is possible in heap.
+
+  9.Hence, memory is not wasted.
+
+  10.It has adequate locality of reference. 
+
+            =============================================================
+
+ >>Scopes:- 
+
+Scopes define that we are able to access the variable or not.
+
+ Global and local 
+
+ a)Global:- 
+   
+   -Global variables are declared outside the programming constructs.
+  
+   -These variables can be accessed from any where within code.
+
+   -These variables are also called fields.That are declared within class but outside the methods.
+
+  b)Local:- 
+
+   -These variables are accessible only within the construct where they are declared.
+
+   -Declared within the block like methods,loops etc.,
